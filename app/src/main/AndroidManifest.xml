@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <uses-permission android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" />
+
+    <queries>
+        <intent>
+            <action android:name="com.applovin.am.intent.action.APPHUB_SERVICE" />
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+        <package android:name="com.facebook.katana" />
+    </queries>
+
+    <application
+        android:name="com.luminatv.tvshowmovies1.MagisTvApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HDHub4U"
+        android:usesCleartextTraffic="true"
+        android:dataExtractionRules="@xml/data_extraction_rules">
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="drgVzz14PWsRLfTzJFE_cp0vsxxdDbNCJPzpl4LCdvTseNx7oV5vnI3AsAiRStodGdVzP3Lxgo7zusf0nZ1fuh" />
+
+        <activity
+            android:name="com.luminatv.tvshowmovies1.activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HDHub4U.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.luminatv.tvshowmovies1.onboarding.OnboardingActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HDHub4U.NoActionBar" />
+
+        <activity
+            android:name="com.luminatv.tvshowmovies1.activities.MainActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HDHub4U.NoActionBar" />
+
+        <activity
+            android:name="com.luminatv.tvshowmovies1.activities.DetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HDHub4U.NoActionBar" />
+
+        <activity
+            android:name="com.luminatv.tvshowmovies1.activities.PlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.HDHub4U.NoActionBar" />
+    </application>
+
+</manifest>

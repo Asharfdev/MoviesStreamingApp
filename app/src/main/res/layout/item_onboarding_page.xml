@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/onboardingPageRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onboarding_backdrop_placeholder">
+
+    <ImageView
+        android:id="@+id/imgOnboardingBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@null"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop" />
+
+    <View
+        android:id="@+id/onboardingScrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/onboarding_cinematic_overlay"
+        android:importantForAccessibility="no" />
+
+    <LinearLayout
+        android:id="@+id/onboardingContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingBottom="166dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="44dp"
+            android:layout_height="4dp"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/onboarding_title_accent" />
+
+        <TextView
+            android:id="@+id/txtOnboardingTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:letterSpacing="0"
+            android:shadowColor="#CC000000"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="12"
+            android:textColor="@color/text_primary"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtOnboardingSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:lineSpacingExtra="4dp"
+            android:shadowColor="#99000000"
+            android:shadowDx="0"
+            android:shadowDy="3"
+            android:shadowRadius="8"
+            android:textColor="@color/text_secondary"
+            android:textSize="17sp" />
+
+    </LinearLayout>
+
+</FrameLayout>
